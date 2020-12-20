@@ -7,6 +7,7 @@ venv/
 __pycache__/
 *.py[cod]
 
+.env
 .idea
 .DS_Store
 .AppleDouble
@@ -15,8 +16,5 @@ __pycache__/
 
 *.sublime-project
 *.sublime-workspace
-
-static/
-posts/static/
 
 db.sqlite3
