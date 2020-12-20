@@ -1,3 +1,4 @@
+![yamdb workflow](https://github.com/Jejevkin/yamdb_final/workflows/yamdb%20workflow/badge.svg)
 ![YAMDB banner](/static/%D0%91%D0%B5%D0%B7%20%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8-1.jpg)
 
 # REST API для сервиса YaMDb — базы отзывов о фильмах, книгах и музыке. (Совместный проект студентов Яндекс.Практикум)
