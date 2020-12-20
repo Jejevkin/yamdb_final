@@ -26,15 +26,19 @@ docker-compose up
 ```
 Чтобы применить миграции, введите
 ```
-docker exec -it infra_sp2_web_1 python manage.py migrate
+docker-compose -f docker-compose.yaml exec web python manage.py migrate --noinput
 ```
 Для создания суперпользователя, необходимо ввести
 ```
-docker exec -it infra_sp2_web_1 python manage.py createsuperuser
+docker-compose -f docker-compose.yaml exec web python manage.py createsuperuser
 ```
 Если необходимо заполнить базу тестовыми данными, введите
 ```
-docker exec infra_sp2_web_1 python manage.py loaddata fixtures.json
+docker-compose -f docker-compose.yaml exec web python manage.py loaddata fixtures.json
+```
+Чтобы собрать статические файлы, используйте команду
+```
+docker-compose -f docker-compose.yaml exec web python manage.py collectstatic
 ```
 Остановить работу можно командой
 ```
