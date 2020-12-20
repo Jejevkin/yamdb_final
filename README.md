@@ -16,7 +16,7 @@
 
 Клонируйте репозиторий на локальную машину.
 ```
-git clone https://github.com/Jejevkin/infra_sp2.git
+git clone https://github.com/Jejevkin/yamdb_final.git
 ```
 Создайте файл .env и заполните его своими значениями. Все нужные переменные и их примерные значения описаны файле .env.template.
 
