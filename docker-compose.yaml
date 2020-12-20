@@ -11,8 +11,9 @@ services:
       - postgres_data:/var/lib/postgresql/data/
     env_file:
       - ./.env
+
   web:
-    build: .
+    image: jejevkin/yamdb_final:latest
     restart: always
     volumes:
       - static_volume:/code/static/
@@ -20,6 +21,7 @@ services:
       - db
     env_file:
       - ./.env
+
   nginx:
     image: nginx:1.19.6-alpine
     depends_on:
