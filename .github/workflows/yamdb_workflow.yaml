@@ -73,6 +73,8 @@ jobs:
 
       - name: Executing remote ssh commands to deploy
         uses: appleboy/ssh-action@master
+        env:
+          ENV_FILE: ${{ secrets.ENV_FILE }}
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
@@ -81,7 +83,7 @@ jobs:
           script: |
             cd code
             sudo touch .env
-            sudo echo ${{ secrets.ENV_VARIABLES }} | sudo tee .env
+            echo $ENV_FILE | base64 --decode > .env
             sudo docker rmi jejevkin/yamdb_final -f
             sudo docker pull jejevkin/yamdb_final:latest
             sudo docker-compose up -d --remove-orphans --force-recreate
