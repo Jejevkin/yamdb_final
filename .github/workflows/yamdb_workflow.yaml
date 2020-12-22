@@ -79,6 +79,7 @@ jobs:
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
+          envs: ENV_FILE
           script: |
             cd code
             sudo touch 1.txt
