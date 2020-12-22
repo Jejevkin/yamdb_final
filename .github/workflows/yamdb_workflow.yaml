@@ -58,6 +58,8 @@ jobs:
     needs: build_and_push_to_docker_hub
 
     steps:
+      - uses: actions/checkout@v2
+
       - name: Copy file via ssh password
         uses: appleboy/scp-action@master
         with:
