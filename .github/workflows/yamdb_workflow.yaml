@@ -69,7 +69,8 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           port: 22
           source: "nginx/nginx.conf, ./docker-compose.yaml"
-          target: "/home/jejevkin/code"
+          target: "/home/jejevkin/code/nginx/"
+          strip_components: 1
 
       - name: Executing remote ssh commands to deploy
         uses: appleboy/ssh-action@master
