@@ -60,13 +60,14 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Copy file via ssh password
+      - name: Copy file via ssh key
         uses: appleboy/scp-action@master
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
+          port: 22
           source: "nginx/nginx.conf, ./docker-compose.yaml"
           target: "/home/jejevkin/code"
 
